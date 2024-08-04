@@ -1,0 +1,26 @@
+app-id: com.archimatetool.Archi
+runtime: org.gnome.Platform
+runtime-version: '46'
+sdk: org.gnome.Sdk
+command: /app/Archi
+finish-args:
+  - --socket=x11
+  - --device=dri
+  - --persist=.archi
+
+modules:
+  - name: archi
+    buildsystem: simple
+    sources:
+      - type: archive
+        url: https://www.archimatetool.com/downloads/archi/5.3.0/Archi-Linux64-5.3.0.tgz
+        sha256: 9e03b760508286c9de7f1771b51d340f2ef7e8ad866274c4608e2f2962e73ecc
+      - type: file
+        path: com.archimatetool.Archi.desktop
+      - type: file
+        url: https://www.archimatetool.com/wp-content/uploads/2018/07/archi-logo-150x150.png
+        sha256: eb975cc35f4210c7a5d6d56c9e1021168bb7837e35c3ede9fbdcb3bb84d53634
+    build-commands:
+      - cp -r * /app
+      - install -Dm644 archi-logo-150x150.png /app/share/icons/hicolor/150x150/apps/${FLATPAK_ID}.png
+      - install -Dm644 com.archimatetool.Archi.desktop "${FLATPAK_DEST}/share/applications/${FLATPAK_ID}.desktop"
