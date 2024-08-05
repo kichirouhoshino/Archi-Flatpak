@@ -20,7 +20,9 @@ modules:
       - type: file
         url: https://www.archimatetool.com/wp-content/uploads/2018/07/archi-logo-150x150.png
         sha256: eb975cc35f4210c7a5d6d56c9e1021168bb7837e35c3ede9fbdcb3bb84d53634
+      - type: file
+        path: icon.png
     build-commands:
       - cp -r * /app
-      - install -Dm644 archi-logo-150x150.png /app/share/icons/hicolor/150x150/apps/${FLATPAK_ID}.png
+      - install -Dm644 icon.png /app/share/icons/hicolor/256x256/apps/${FLATPAK_ID}.png
       - install -Dm644 com.archimatetool.Archi.desktop "${FLATPAK_DEST}/share/applications/${FLATPAK_ID}.desktop"
