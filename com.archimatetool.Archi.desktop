@@ -1,10 +1,9 @@
 [Desktop Entry]
 Name=Archi
 Comment=The Open Source modelling toolkit for creating ArchiMate models and sketches
-Exec=/app/Archi
+Exec=archi
 Terminal=false
 Type=Application
 Icon=com.archimatetool.Archi
 StartupWMClass=Archi
 Categories=Graphics;
-MimeType=application/x-archimate;

@@ -2,7 +2,7 @@ app-id: com.archimatetool.Archi
 runtime: org.gnome.Platform
 runtime-version: '47'
 sdk: org.gnome.Sdk
-command: /app/Archi
+command: archi
 finish-args:
   - --socket=x11
   - --device=dri
@@ -28,13 +28,10 @@ modules:
         path: icon.png
       - type: file
         path: com.archimatetool.Archi.mime.xml
+      - type: file
+        path: archi.sh
     build-commands:
-      - mkdir -p /app
-      - tar --no-same-owner -xzf Archi-Linux64-5.4.3.tgz -C /app --strip-components=1 Archi/
+      - tar --no-same-owner -xzf Archi-Linux64-5.4.3.tgz -C /app
       - install -Dm644 icon.png /app/share/icons/hicolor/256x256/apps/${FLATPAK_ID}.png
       - install -Dm644 com.archimatetool.Archi.desktop "${FLATPAK_DEST}/share/applications/${FLATPAK_ID}.desktop"
-    post-install:
-      - mkdir -p /app/share/mime/packages/
-      - install -m644 -p -t /app/share/mime/packages com.archimatetool.Archi.mime.xml
-      - update-mime-database /app/share/mime
-      - desktop-file-install --rebuild-mime-info-cache --dir=/app/share/applications com.archimatetool.Archi.desktop
+      - install -Dm755 archi.sh /app/bin/archi
