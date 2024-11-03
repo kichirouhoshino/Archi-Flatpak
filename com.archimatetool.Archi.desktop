@@ -7,3 +7,4 @@ Type=Application
 Icon=com.archimatetool.Archi
 StartupWMClass=Archi
 Categories=Graphics;
+MimeType=application/x-archimate;
