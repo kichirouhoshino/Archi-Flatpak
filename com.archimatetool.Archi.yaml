@@ -27,8 +27,6 @@ modules:
       - type: file
         path: icon.png
       - type: file
-        path: com.archimatetool.Archi.mime.xml
-      - type: file
         path: archi.sh
     build-commands:
       - tar --no-same-owner -xzf Archi-Linux64-5.4.3.tgz -C /app
