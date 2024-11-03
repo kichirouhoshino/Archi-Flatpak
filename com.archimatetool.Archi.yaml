@@ -28,6 +28,6 @@ modules:
         path: icon.png
     build-commands:
       - mkdir -p /app
-      - bsdtar -xzf Archi-Linux64-5.4.3.tgz -C /app --strip-components=1 Archi/
+      - tar -xzf Archi-Linux64-5.4.3.tgz -C /app --strip-components=1 Archi/
       - install -Dm644 icon.png /app/share/icons/hicolor/256x256/apps/${FLATPAK_ID}.png
       - install -Dm644 com.archimatetool.Archi.desktop "${FLATPAK_DEST}/share/applications/${FLATPAK_ID}.desktop"
