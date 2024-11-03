@@ -1,6 +1,6 @@
 app-id: com.archimatetool.Archi
 runtime: org.gnome.Platform
-runtime-version: '46'
+runtime-version: '47'
 sdk: org.gnome.Sdk
 command: /app/Archi
 finish-args:
@@ -14,8 +14,8 @@ modules:
     buildsystem: simple
     sources:
       - type: archive
-        url: https://www.archimatetool.com/downloads/archi/5.3.0/Archi-Linux64-5.3.0.tgz
-        sha256: 9e03b760508286c9de7f1771b51d340f2ef7e8ad866274c4608e2f2962e73ecc
+        url: https://www.archimatetool.com/downloads/archi/5.4.3/Archi-Linux64-5.4.3.tgz
+        sha256: f79a66ed6333736e466ed73bde4fb3f00272c0983a8bafbf613b31d43680eec7
       - type: file
         path: com.archimatetool.Archi.desktop
       - type: file
