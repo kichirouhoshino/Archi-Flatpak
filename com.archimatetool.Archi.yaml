@@ -12,8 +12,11 @@ finish-args:
 modules:
   - name: archi
     buildsystem: simple
+    build-options:
+        strip: false
+        no-debuginfo: true
     sources:
-      - type: archive
+      - type: file
         url: https://www.archimatetool.com/downloads/archi/5.4.3/Archi-Linux64-5.4.3.tgz
         sha256: f79a66ed6333736e466ed73bde4fb3f00272c0983a8bafbf613b31d43680eec7
       - type: file
@@ -24,6 +27,7 @@ modules:
       - type: file
         path: icon.png
     build-commands:
-      - cp -r * /app
+      - mkdir -p /app
+      - bsdtar -xzf Archi-Linux64-5.4.3.tgz -C /app --strip-components=1 Archi/
       - install -Dm644 icon.png /app/share/icons/hicolor/256x256/apps/${FLATPAK_ID}.png
       - install -Dm644 com.archimatetool.Archi.desktop "${FLATPAK_DEST}/share/applications/${FLATPAK_ID}.desktop"
