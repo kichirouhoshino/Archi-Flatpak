@@ -1,3 +1,3 @@
 #!/bin/sh
 cd /app/Archi
-./Archi %U
+./Archi "$0"
