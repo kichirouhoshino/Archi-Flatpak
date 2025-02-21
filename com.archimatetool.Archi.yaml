@@ -2,7 +2,7 @@ app-id: com.archimatetool.Archi
 runtime: org.gnome.Platform
 runtime-version: '47'
 sdk: org.gnome.Sdk
-command: archi
+command: Archi
 finish-args:
   - --socket=x11
   - --device=dri
@@ -16,20 +16,20 @@ modules:
         strip: false
         no-debuginfo: true
     sources:
-      - type: file
-        url: https://www.archimatetool.com/downloads/archi/5.4.3/Archi-Linux64-5.4.3.tgz
-        sha256: f79a66ed6333736e466ed73bde4fb3f00272c0983a8bafbf613b31d43680eec7
+      - type: archive
+        url: https://www.archimatetool.com/downloads/archi/5.5.0/Archi-Linux64-5.5.0.tgz
+        sha256: 0cb6207d8cd2b315b82597d633e114f22718f83bcc324beb2248f834c88d04bd
+        dest: Archi
       - type: file
         path: com.archimatetool.Archi.desktop
       - type: file
-        url: https://www.archimatetool.com/wp-content/uploads/2018/07/archi-logo-150x150.png
-        sha256: eb975cc35f4210c7a5d6d56c9e1021168bb7837e35c3ede9fbdcb3bb84d53634
+        path: com.archimatetool.Archi.appdata.xml
       - type: file
-        path: icon.png
-      - type: file
-        path: archi.sh
+        path: com.archimatetool.Archi.png
     build-commands:
-      - tar --no-same-owner -xzf Archi-Linux64-5.4.3.tgz -C /app
-      - install -Dm644 icon.png /app/share/icons/hicolor/256x256/apps/${FLATPAK_ID}.png
-      - install -Dm644 com.archimatetool.Archi.desktop "${FLATPAK_DEST}/share/applications/${FLATPAK_ID}.desktop"
-      - install -Dm755 archi.sh /app/bin/archi
+      - mkdir -p /app/bin
+      - mv Archi /app/Archi
+      - ln -s /app/Archi/Archi /app/bin/Archi
+      - install -Dm644 ${FLATPAK_ID}.png /app/share/icons/hicolor/256x256/apps/${FLATPAK_ID}.png
+      - install -Dm644 ${FLATPAK_ID}.desktop ${FLATPAK_DEST}/share/applications/${FLATPAK_ID}.desktop
+      - install -Dm644 ${FLATPAK_ID}.appdata.xml /app/share/appdata/${FLATPAK_ID}.appdata.xml

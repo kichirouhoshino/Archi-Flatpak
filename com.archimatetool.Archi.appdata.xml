@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+    <id>com.archimatetool.Archi</id>
+    <name>Archi</name>
+    <developer id="com.archimatetool">
+        <name>The Open Group</name>
+    </developer>
+    <summary>The Open Source modelling toolkit for creating ArchiMate models and sketches</summary>
+    <metadata_license>CC0-1.0</metadata_license>
+    <project_license>MIT</project_license>
+    <url type="homepage">https://www.archimatetool.com</url>
+    <url type="help">https://www.archimatetool.com/support</url>
+    <url type="donation">https://www.archimatetool.com/donate</url>
+    <content_rating type="oars-1.1" />
+    <recommends>
+        <control>keyboard</control>
+        <control>pointing</control>
+    </recommends>
+    <categories>
+        <category>Graphics</category>
+    </categories>
+    <launchable type="desktop-id">com.archimatetool.Archi.desktop</launchable>
+
+    <description>
+        <p>The Archi® modelling toolkit is targeted toward all levels of Enterprise Architects and Modellers. It provides a low cost to entry solution to users who may be making their first steps in the ArchiMate modelling language, or who are looking for an open source, cross-platform ArchiMate modelling tool for their company or institution and wish to engage with the language within a TOGAF® or other Enterprise Architecture framework.</p>
+        <p>The ArchiMate® modelling language is an open and independent Enterprise Architecture standard that supports the description, analysis and visualisation of architecture within and across business domains. ArchiMate is one of the open standards hosted by The Open Group® and is fully aligned with TOGAF®. ArchiMate aids stakeholders in assessing the impact of design choices and changes.</p>
+        <p>Supporting the ArchiMate® 3.2 language - Archi® supports the latest version of the ArchiMate® 3.2 language. Easily and intuitively create all ArchiMate elements and relations in all of the ArchiMate views. Use the magic connector to create the correct connections between ArchiMate concepts. Refine your model with user-defined properties, and colourise your diagram with your own colour scheme.</p>
+        <p>ArchiMate® Views and Viewpoints - Creating ArchiMate Views and Viewpoints is simple using Archi. Simply create a new ArchiMate View and set its Viewpoint to the one that is suitable for the target audience and stakeholders. Add concepts that are aligned to the given Viewpoint to create a unique perspective on your model.</p>
+        <p>Hints View - Helping you understand ArchiMate. If you’re not sure what element to use, or what relationship to connect, simply fire up the Hints view. All ArchiMate elements, relationships and viewpoints are described to provide you with the right information at your fingertips, just when you need it.</p>
+        <p>The Visualiser - Connecting the dots. The Visualiser displays the selected model element and all of its relationships with other model elements in a radial-tree graphic. It is the graphical equivalent of the Navigator. Selecting an element or relationship in the Model Tree, the Navigator or in a Diagram View will update the selection in the Visualiser. Drill in to see more connections.</p>
+        <p>Cross Platform - Windows, Mac or Linux? We’ve got you covered. Archi is fully cross-platform as it is written in Java on the Eclipse Rich Client Platform. Therefore it works on Windows, macOS, and most Linux distros right out of the box. You don’t have to worry about sharing models across installations. A portable version and an installer version is available for Windows.</p>
+        <p>Sketch View - Sketching your ideas. Brainstorm your ideas with elements written on “stickies”. Quickly design and create “soft” models, capturing the essence of your modelling process without worrying about the technicalities of the language. Share and refine your ideas before transforming them to ArchiMate views.</p>
+        <p>Canvas Modelling Toolkit - Create your own canvas world. The Canvas Modelling Toolkit provides the tools for you to create and edit your own canvasses. With the Canvas Modelling Toolkit you can design and create re-usable Canvas Templates to share with colleagues or you use it as a pre-design tool to sketch out ideas and models.</p>
+    </description>
+
+    <screenshots>
+        <screenshot type="default">
+            <image>https://www.archimatetool.com/wp-content/uploads/2021/02/Archi-Full.png</image>
+            <caption>A screen of Archi</caption>
+        </screenshot>
+        <screenshot type="default">
+            <image>https://www.archimatetool.com/wp-content/uploads/2018/08/archi_total.png</image>
+            <caption>A screen of Archi</caption>
+        </screenshot>
+        <screenshot type="default">
+            <image>https://www.archimatetool.com/wp-content/uploads/2018/08/archi_view_tech_sm.png</image>
+            <caption>ArchiMate® Views and Viewpoints</caption>
+        </screenshot>
+        <screenshot type="default">
+            <image>https://www.archimatetool.com/wp-content/uploads/2018/08/hints_sm.png</image>
+            <caption>Hints View</caption>
+        </screenshot>
+        <screenshot type="default">
+            <image>https://www.archimatetool.com/wp-content/uploads/2018/08/visualiser_sm.png</image>
+            <caption>The Visualiser</caption>
+        </screenshot>
+        <screenshot type="default">
+            <image>https://www.archimatetool.com/wp-content/uploads/2018/08/archi_again_sm.png</image>
+            <caption>A screen of Archi</caption>
+        </screenshot>
+        <screenshot type="default">
+            <image>https://www.archimatetool.com/wp-content/uploads/2018/08/sketch_sm.png</image>
+            <caption>Sketch View</caption>
+        </screenshot>
+        <screenshot type="default">
+            <image>https://www.archimatetool.com/wp-content/uploads/2018/08/canvi_sm-e1533322966304.png</image>
+            <caption>Canvas Modelling Toolkit</caption>
+        </screenshot>
+    </screenshots>
+
+    <releases>
+        <release version="5.5.0" date="2025-01-29">
+            <description></description>
+        </release>
+    </releases>
+</component>
